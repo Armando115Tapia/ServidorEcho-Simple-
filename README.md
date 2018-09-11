@@ -2,6 +2,7 @@
 Un servidor y un cliente echo básicos, realizados en java con Maven, sin concurrencia multihilos etc.
 
 En esta carpeta se encuentran dos proyectos independientes entre sí, uno es el programa que contiene el **Servidor** y el otro el **cliente**
+
 **Información de los proyectos**
 * Son proyectos Maven
 * Realizados con java 1.8 
