@@ -1,5 +1,8 @@
 package atc.echo.echo.server;
 
+/**
+ * @see http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion05-apuntes.html
+ * */
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,9 +17,17 @@ public class AppServidor
 	
     public static void main( String[] args ) throws IOException
     {
-    	DataInputStream flujo_entrada;
+    	/**Se coloca las declaraciones en este sector para poder usar correctamente el bloque try-catch-finally*/
+    	
+    	/**Para transferir datos mediante cualquier flujo de E/S, debemos codificar estos datos 
+    	 * en forma de array de bits 
+    	 * Los flujos de DataInputStream y DataOutputStream nos permiten codificar y decodificar 
+    	 * respectivamente los tipos de datos simples en forma de array de bytes */
+    	DataInputStream flujo_entrada=null;
     	DataOutputStream flujo_salida = null;
+    	/**Un socket servidor es el que escucha en un puerto definido*/
     	ServerSocket serverSocket= null;
+       /**Cuando se conecte un cliente, el server socket le pasara la conexion a un nuevo socket*/
     	Socket socket = null;
     	String mensajeRecibido = "";
     	

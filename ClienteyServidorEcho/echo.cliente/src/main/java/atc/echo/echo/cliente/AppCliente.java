@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class AppCliente 
 {
-	private static String host = "192.168.0.102";
+	private static String host = "172.29.40.240";
 	private static int port =50000;
 	
     public static void main( String[] args ) throws IOException
@@ -54,7 +54,7 @@ public class AppCliente
     	
         
     }
-    
+    /**Cuenta las veces que se repiten los dos puntos, para el caso de EXIT */
     public static int cuentaRepeticionesCaracter(String inRespuesaServidor, char inCaracter) {
     	int posicion=0, contador=0;
     	posicion=inRespuesaServidor.indexOf(inCaracter);
